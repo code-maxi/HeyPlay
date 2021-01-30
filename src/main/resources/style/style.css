@@ -1,0 +1,1141 @@
+@font-face {
+  font-family: "smiley";
+  src: url("../fonts/NotoColorEmoji.ttf");
+}
+.anmelden {
+  -fx-background-color: #282828;
+  -fx-padding: 20px 40px;
+}
+
+.white-text-label {
+  -fx-text-fill: #c8c8c8;
+}
+
+.go-button {
+  -fx-background-color: #228b22;
+  -fx-background-radius: 15px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 18px;
+}
+.go-button:hover {
+  -fx-background-color: #3e7530;
+}
+
+.invite-team-button {
+  -fx-background-color: #001488;
+  -fx-background-radius: 15px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+}
+.invite-team-button:hover {
+  -fx-background-color: #0015AA;
+}
+
+.green-button {
+  -fx-background-color: #228b22;
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+}
+.green-button:hover {
+  -fx-background-color: #3e7530;
+}
+
+.blue-button {
+  -fx-background-color: #0000cd;
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+}
+.blue-button:hover {
+  -fx-background-color: #191970;
+}
+
+.timer-label {
+  -fx-background-color: rgba(0, 0, 0, 0.5);
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+}
+
+.welcome-label {
+  -fx-text-fill: white;
+  -fx-font-size: 20px;
+  -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+}
+
+.game-pane {
+  -fx-padding: 7px;
+  -fx-border-radius: 14px;
+  -fx-background-radius: 14px;
+  -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-border-color: red;
+}
+.game-pane > * {
+  -fx-text-fill: yellow;
+}
+
+.white-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #c8c8c8;
+  -fx-text-fill: black;
+}
+
+.black-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #3c3c3c;
+  -fx-text-fill: white;
+}
+
+.mtm-move-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #006312;
+  -fx-text-fill: white;
+}
+
+.move-player {
+  -fx-border-radius: 10px;
+  -fx-border-color: blue;
+  -fx-border-width: 2px;
+  -fx-text-fill: white;
+}
+
+.red-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #960000;
+  -fx-text-fill: white;
+}
+
+.yellow-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #c5be00;
+  -fx-text-fill: black;
+}
+
+.own-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #0095e1;
+  -fx-text-fill: black;
+}
+
+.viewer-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #006db9;
+  -fx-text-fill: black;
+}
+
+.dealer-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: #004591;
+  -fx-text-fill: white;
+}
+
+.textfield-player {
+  -fx-font-size: 17px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-alignment: center;
+  -fx-background-color: white;
+  -fx-text-fill: black;
+  -fx-border-radius: 10px;
+  -fx-border-color: green;
+  -fx-border-width: 2px;
+  -fx-padding: 10px 5px 10px 5px;
+}
+
+.wizard-move-player {
+  -fx-border-radius: 10px;
+  -fx-border-color: lightblue;
+  -fx-border-width: 2px;
+}
+
+.move-umgehen-player {
+  -fx-border-radius: 10px;
+  -fx-border-color: yellow;
+  -fx-border-width: 1px;
+}
+
+.scroll-pane {
+  -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+  -fx-background-color: transparent;
+}
+
+#image-container .scroll-bar:vertical {
+  -fx-background-color: transparent;
+}
+
+#send-field {
+  -fx-font-size: 16px;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-text-fill: white;
+}
+#send-field, #send-field * {
+  -fx-background-color: #646464;
+}
+
+#send-button {
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-padding: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-color: rgba(0, 0, 0, 0);
+  -fx-background-color: rgba(255, 255, 255, 0.7);
+}
+#send-button:hover {
+  -fx-background-color: white;
+}
+#send-button:pressed {
+  -fx-border-color: black;
+}
+#send-button:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.9);
+}
+
+.smely-button {
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-padding: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-color: rgba(0, 0, 0, 0);
+  -fx-font-size: 16px;
+  -fx-padding: 2px;
+  -fx-font-size: 22px;
+}
+.smely-button:hover {
+  -fx-background-color: white;
+}
+.smely-button:pressed {
+  -fx-border-color: black;
+}
+
+#image-container {
+  -fx-background-image: url("../image/chat-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+}
+
+.message-name {
+  -fx-background-radius: 10px 10px 0 0;
+  -fx-background-color: rgba(0, 0, 0, 0.4);
+  -fx-padding: 5px;
+  -fx-font-size: 16px;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.message-text {
+  -fx-font-size: 14px;
+  -fx-padding: 7px;
+  -fx-background-radius: 0 0 10px 10px;
+  -fx-background-color: rgba(255, 255, 255, 0.8);
+  -fx-text-fill: black;
+}
+
+.really-text {
+  -fx-text-fill: white;
+  -fx-font-size: 18px;
+}
+
+.really-under {
+  -fx-text-fill: white;
+  -fx-font-size: 15px;
+}
+
+.really-ja,
+.really-nein {
+  -fx-background-radius: 10px;
+  -fx-text-fill: white;
+  -fx-padding: 7px 15px 7px 15px;
+}
+
+.really-ja {
+  -fx-background-color: #681200;
+}
+.really-ja:hover {
+  -fx-background-color: #7f1400;
+}
+
+.really-nein {
+  -fx-background-color: #006602;
+}
+.really-nein:hover {
+  -fx-background-color: #007b02;
+}
+
+.really-wrong {
+  -fx-background-color: rgba(255, 255, 255, 0.4);
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: yellow;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+}
+
+.end-dialog-exit {
+  -fx-background-color: #228b22;
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+  -fx-font-size: 15px;
+}
+.end-dialog-exit:hover {
+  -fx-background-color: #3e7530;
+}
+
+.end-dialog-partie {
+  -fx-background-color: #0000cd;
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+}
+.end-dialog-partie:hover {
+  -fx-background-color: #191970;
+}
+
+.choose-piece-container {
+  -fx-background-image: url("../image/chat-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+  -fx-border-size: 2px;
+}
+
+.end-dialog-container {
+  -fx-background-image: url("../image/chat-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-padding: 40px;
+}
+
+.choose-piece-image {
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-padding: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-color: rgba(0, 0, 0, 0);
+}
+.choose-piece-image:hover {
+  -fx-background-color: white;
+}
+.choose-piece-image:pressed {
+  -fx-border-color: black;
+}
+
+.end-dialog-label1 {
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(255, 255, 255, 0.4);
+  -fx-padding: 10px 5px 10px 5px;
+  -fx-text-fill: black;
+  -fx-text-weight: bold;
+  -fx-font-size: 25px;
+}
+
+.end-dialog-label2 {
+  -fx-font-size: 20px;
+}
+
+.message-container {
+  -fx-background-color: radial-gradient(radius 180%, #000000, #020077);
+  -fx-padding: 10px;
+}
+
+.message-label {
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+}
+
+.message-button {
+  -fx-background-color: #064f00;
+  -fx-background-radius: 10px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 15px;
+}
+.message-button:hover {
+  -fx-background-color: #066700;
+}
+
+.sources-container {
+  -fx-background-color: #323232;
+  -fx-padding: 20px;
+}
+
+.sources-label {
+  -fx-font-size: 15px;
+  -fx-text-fill: white;
+}
+
+.sources-link {
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(200, 0, 200, 0.4);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-padding: 2px 5px 2px 5px;
+  -fx-text-fill: white;
+}
+
+.source-button {
+  -fx-background-color: #191970;
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+}
+.source-button:hover {
+  -fx-background-color: #0000cd;
+}
+.source-button:pressed {
+  -fx-background-color: lightblue !important;
+}
+
+.online-pane {
+  -fx-padding: 4px;
+  -fx-background-color: rgba(222, 206, 255, 0.4);
+}
+
+.online-name {
+  -fx-font-size: 16px;
+  -fx-text-fill: black;
+}
+
+.online-tippt {
+  -fx-font-size: 14px;
+  -fx-text-fill: red;
+}
+
+.online-black-tippt,
+.online-red-tippt {
+  -fx-text-fill: yellow;
+}
+
+.online-white-tippt,
+.online-viewer-tippt {
+  -fx-text-fill: red;
+}
+
+.online-yellow-tlaippt {
+  -fx-text-fill: blue;
+}
+
+.mtm-settings-pane {
+  -fx-padding: 4px;
+  -fx-background-color: rgba(0, 0, 0, 0.07);
+}
+
+.mtm-settings-back-button {
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-padding: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-color: rgba(0, 0, 0, 0);
+  -fx-padding: 2px;
+}
+.mtm-settings-back-button:hover {
+  -fx-background-color: white;
+}
+.mtm-settings-back-button:pressed {
+  -fx-border-color: black;
+}
+
+.mtm-settings-trash-button {
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-padding: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-color: rgba(0, 0, 0, 0);
+  -fx-padding: 7px;
+}
+.mtm-settings-trash-button:hover {
+  -fx-background-color: white;
+}
+.mtm-settings-trash-button:pressed {
+  -fx-border-color: black;
+}
+
+.mtm-settings-togglebutton {
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
+}
+
+.anfrage-pane {
+  -fx-background-color: rgba(0, 0, 0, 0.3);
+  -fx-background-radius: 5px;
+  -fx-padding: 7px;
+}
+
+.anfrage-container {
+  -fx-background-image: url("../image/chat-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-padding: 5px;
+}
+
+.anfrage-label {
+  -fx-text-fill: black;
+  -fx-font-size: 16px;
+  -fx-background-color: #a2fffa;
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+}
+
+.anfrage-button {
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-padding: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-color: rgba(0, 0, 0, 0);
+}
+.anfrage-button:hover {
+  -fx-background-color: white;
+}
+.anfrage-button:pressed {
+  -fx-border-color: black;
+}
+
+.small-label {
+  -fx-text-fill: black;
+  -fx-font-size: 14px;
+  -fx-background-color: rgba(255, 255, 255, 0.4);
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+}
+
+.anfragen-dialog-pane {
+  -fx-background-image: url("../image/chat-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+}
+
+.anfragen-dialog-label {
+  -fx-background-radius: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.4);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: black;
+  -fx-font-size: 14px;
+}
+
+.anfragen-dialog-textfield {
+  -fx-font-size: 20px;
+}
+
+.upper-border-pane {
+  -fx-background-color: #dcdcc8;
+  -fx-background-radius: 10px;
+  -fx-padding: 6px;
+}
+
+.upper-border-pane-wizard {
+  -fx-background-color: rgba(0, 0, 0, 0.4);
+  -fx-background-radius: 10px;
+  -fx-padding: 6px;
+}
+
+.menu-bar {
+  -fx-padding: 0;
+  -fx-background-color: #d2d2dc;
+  -fx-spacing: 5px;
+}
+
+.menu, .menu-item {
+  -fx-text-fill: black;
+}
+.menu:hover, .menu-item:hover {
+  -fx-text-fill: black !important;
+  -fx-background-color: #00a0ff !important;
+}
+.menu:pressed, .menu-item:pressed {
+  -fx-text-fill: black !important;
+  -fx-background-color: #0064e1 !important;
+}
+
+.almost-anfrage-back {
+  -fx-font-size: 16px;
+  -fx-text-fill: black;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(255, 171, 0, 0.5);
+}
+
+.right-anfrage-back {
+  -fx-font-size: 16px;
+  -fx-text-fill: black;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-background-radius: 10px;
+  -fx-background-color: #04B800;
+}
+
+.wrong-anfrage-back {
+  -fx-font-size: 16px;
+  -fx-text-fill: black;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(255, 50, 0, 0.5);
+}
+
+.image-button {
+  -fx-border-color: black;
+  -fx-border-width: 5px;
+}
+.image-button:hover {
+  -fx-border-color: green;
+}
+
+.cards-container {
+  -fx-padding: 10px;
+  -fx-background-color: #d8d8d8;
+  -fx-background-image: url("../image/wood-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-effect: dropshadow(three-pass-box, white, 30, 0, 0, 0);
+}
+
+.placement-name {
+  -fx-text-fill: black;
+  -fx-font-size: 16px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+  -fx-font-size: 18px;
+}
+
+.placement-points {
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-background-color: #ff6400;
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+}
+
+.placement-runden-d {
+  -fx-text-fill: black;
+  -fx-font-size: 16px;
+  -fx-background-color: #ff6400;
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+}
+
+.placement-last-plus {
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-background-color: darkgreen;
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+}
+
+.placement-v-stiche {
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-background-color: blue;
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+}
+
+.placement-a-stiche {
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-background-color: red;
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+}
+
+.placement-place {
+  -fx-text-fill: black;
+  -fx-font-size: 16px;
+  -fx-background-color: rgba(255, 255, 255, 0.6);
+  -fx-background-radius: 10px;
+  -fx-padding: 3px 5px 3px 5px;
+  -fx-font-size: 12px;
+}
+
+.placement-container {
+  -fx-background-image: url("../image/wood-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-padding: 10px;
+}
+
+.wood-container {
+  -fx-background-image: url("../image/wood-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+}
+
+.placement-pane-other {
+  -fx-background-color: rgba(0, 0, 0, 0.45);
+  -fx-background-radius: 5px;
+  -fx-padding: 7px;
+}
+
+.placement-pane-own {
+  -fx-background-color: rgba(0, 40, 0, 0.45);
+  -fx-background-radius: 5px;
+  -fx-padding: 7px;
+}
+
+.placement-pane-bottom {
+  -fx-background-color: rgba(0, 0, 0, 0.45);
+  -fx-background-radius: 5px;
+  -fx-padding: 7px;
+  -fx-border-radius: 5px;
+  -fx-border-color: black;
+  -fx-border-width: 1px;
+}
+
+.wizard-upperborder {
+  -fx-background-image: url("../image/wood-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-effect: dropshadow(three-pass-box, white, 0, 0, 0, 30);
+  -fx-padding: 10px;
+}
+
+.wizard-info {
+  -fx-font-size: 15px;
+  -fx-text-fill: yellow;
+  -fx-padding: 3px 9px;
+  -fx-background-radius: 10px;
+  -fx-background-color: darkblue;
+}
+
+.center-component-box2 {
+  -fx-padding: 15px;
+  -fx-background-radius: 20px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-border-color: black;
+}
+
+.center-component-button {
+  -fx-padding: 7px 14px;
+  -fx-background-color: darkblue;
+  -fx-background-radius: 10px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 18px;
+}
+.center-component-button:hover {
+  -fx-background-color: blue;
+}
+
+.welcome-label2 {
+  -fx-background-color: rgba(0, 0, 0, 0.6);
+}
+
+.simple-dialog-label {
+  -fx-text-fill: black;
+  -fx-font-size: 15px;
+  -fx-background-color: rgba(255, 255, 255, 0.4);
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+}
+
+.simple-dialog-container-wood {
+  -fx-background-image: url("../image/wood-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-padding: 0px;
+}
+
+.simple-dialog-container-normal {
+  -fx-background-color: radial-gradient(radius 180%, lightblue, blue);
+  -fx-padding: 20px;
+}
+
+.select-trumpf-button {
+  -fx-padding: 20px;
+  -fx-background-color: rgba(255, 255, 255, 0.3);
+  -fx-background-radius: 10px;
+}
+.select-trumpf-button:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+}
+.select-trumpf-button:pressed {
+  -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+.hellsehen-label-owner {
+  -fx-text-fill: black;
+  -fx-font-size: 15px;
+  -fx-background-color: rgba(255, 255, 255, 0.4);
+  -fx-background-radius: 20px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-background-color: rgba(0, 0, 0, 0.5);
+  -fx-text-fill: yellow;
+}
+
+.hellsehen-container {
+  -fx-padding: 5px;
+  -fx-background-color: rgba(255, 255, 255, 0.2);
+  -fx-background-radius: 10px;
+}
+
+.rundenanzahl-label {
+  -fx-background-radius: 20px;
+  -fx-background-color: rgba(0, 0, 0, 0.3);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-font-size: 16px;
+}
+
+.noconnect-label {
+  -fx-background-radius: 20px;
+  -fx-background-color: rgba(0, 0, 255, 0.7);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+}
+
+.my-chombobox {
+  -fx-background-color: #646464;
+  -fx-text-fill: #c8c8c8;
+  -fx-font-size: 14px;
+}
+.my-chombobox:hover {
+  -fx-background-color: #787878;
+}
+
+.small-heading-label {
+  -fx-font-size: 13px;
+  -fx-text-fill: #c8c8c8;
+}
+
+.my-textfield {
+  -fx-background-color: #646464;
+  -fx-text-fill: yellow;
+  -fx-font-size: 14px;
+}
+.my-textfield:hover {
+  -fx-background-color: #787878;
+}
+
+#s-stark {
+  -fx-text-fill: lightgreen;
+}
+
+#s-mittel {
+  -fx-text-fill: yellow;
+}
+
+#s-schwach {
+  -fx-text-fill: orange;
+}
+
+.hoverball-team-item {
+  -fx-padding: 10px;
+}
+
+.hoverball-team-item-label1 {
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(0, 0, 0, 0.5);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-font-size: 18px;
+  -fx-text-fill: yellow;
+}
+
+.hoverball-team-item-label2 {
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(0, 0, 0, 0.3);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-font-size: 14px;
+  -fx-text-fill: white;
+}
+
+.hoverball-team-item-label3 {
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(0, 0, 0, 0.3);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-font-size: 16px;
+  -fx-text-fill: white;
+}
+
+.hoverball-team-item-label4 {
+  -fx-background-radius: 5px;
+  -fx-background-color: rgba(100, 0, 0, 0.5);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-padding: 3px 6px;
+  -fx-font-size: 14px;
+  -fx-text-fill: white;
+}
+
+.background-gradient {
+  -fx-background-color: radial-gradient(radius 180%, purple, blue);
+}
+
+.cyber-label {
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-padding: 10px;
+  -fx-font-size: 16px;
+}
+
+.cyber-button {
+  -fx-background-color: darkred;
+  -fx-background-radius: 10px;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-text-fill: white;
+  -fx-font-size: 18px;
+  -fx-padding: 7px 14px;
+}
+.cyber-button:hover {
+  -fx-background-color: red;
+}
+
+.connect-label {
+  -fx-font-size: 11px;
+  -fx-padding: 5px 10px;
+  -fx-background-radius: 14px;
+  -fx-text-fill: white;
+}
+
+.eye-label {
+  -fx-font-size: 16px;
+  -fx-padding: 7px;
+  -fx-background-radius: 14px;
+  -fx-background-color: #0000a0;
+  -fx-text-fill: white;
+}
+.eye-label:hover {
+  -fx-background-color: #0000c8;
+}
+
+.start-user-label {
+  -fx-padding: 5px 10px;
+  -fx-background-radius: 10px;
+  -fx-text-fill: white;
+}
+
+.version-label {
+  -fx-background-radius: 5px;
+  -fx-background-color: #646464;
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-font-size: 16px;
+  -fx-text-fill: white;
+  -fx-padding: 5px 10px;
+}
+
+.preloader-loading {
+  -fx-background-radius: 10px;
+  -fx-background-color: rgba(50, 50, 50, 0.7);
+  -fx-padding: 5px 10px 5px 10px;
+  -fx-font-size: 18px;
+  -fx-text-fill: #FFFFAE;
+  -fx-padding: 5px 10px;
+}
+
+.preloader-container {
+  -fx-background-image: url("../image/preloader.png");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+  -fx-padding: 20px;
+}
+
+.green-button {
+  -fx-background-color: #007C3E;
+  -fx-text-fill: white;
+  -fx-padding: 7px 7px;
+  -fx-background-radius: 14px;
+  -fx-border-radius: 14px;
+}
+.green-button:hover {
+  -fx-background-color: #009048;
+}
+.green-button:pressed {
+  -fx-background-color: lightgreen;
+}
+
+.dialog-container {
+  -fx-background-color: #323232;
+  -fx-background-radius: 7px;
+}
+
+.close-button {
+  -fx-background-color: rgba(255, 255, 255, 0.2);
+  -fx-text-fill: yellow;
+  -fx-padding: 1px 7px;
+  -fx-background-radius: 2px;
+  -fx-border-radius: 2px;
+  -fx-background-radius: 10px;
+}
+.close-button:hover {
+  -fx-background-color: rgba(255, 255, 255, 0.4);
+}
+.close-button:pressed {
+  -fx-background-color: gray;
+}
+
+.dark-scroll-pane .scroll-bar {
+  -fx-background-color: transparent;
+}
+.dark-scroll-pane .scroll-bar .increment-button, .dark-scroll-pane .scroll-bar .decrement-button {
+  visibility: hidden;
+}
+.dark-scroll-pane .scroll-bar .thumb {
+  -fx-background-color: #646464;
+  -fx-background-radius: 20px;
+}
+.dark-scroll-pane .scroll-bar .thumb:hover {
+  -fx-background-color: #787878;
+}
+.dark-scroll-pane .scroll-bar .thumb:pressed {
+  -fx-background-color: #8c8c8c;
+}
+
+.brown-scroll-pane .scroll-bar {
+  -fx-background-color: transparent;
+}
+.brown-scroll-pane .scroll-bar .increment-button, .brown-scroll-pane .scroll-bar .decrement-button {
+  visibility: hidden;
+}
+.brown-scroll-pane .scroll-bar .thumb {
+  -fx-background-color: #6B470F;
+  -fx-background-radius: 20px;
+}
+.brown-scroll-pane .scroll-bar .thumb:hover {
+  -fx-background-color: #744D10;
+}
+.brown-scroll-pane .scroll-bar .thumb:pressed {
+  -fx-background-color: #A46D17;
+}
+
+.blue-scroll-pane .scroll-bar {
+  -fx-background-color: transparent;
+}
+.blue-scroll-pane .scroll-bar .increment-button, .blue-scroll-pane .scroll-bar .decrement-button {
+  visibility: hidden;
+}
+.blue-scroll-pane .scroll-bar .thumb {
+  -fx-background-color: #00406D;
+  -fx-background-radius: 20px;
+}
+.blue-scroll-pane .scroll-bar .thumb:hover {
+  -fx-background-color: #004F87;
+}
+.blue-scroll-pane .scroll-bar .thumb:pressed {
+  -fx-background-color: #006FBE;
+}
+
+.blue-background {
+  -fx-background-image: url("../image/chat-background.jpg");
+  -fx-background-repeat: stretch;
+  -fx-background-size: cover;
+  -fx-background-position: center center;
+  -fx-background-radius: 10px;
+}
+
+.small-button {
+  -fx-background-color: #D9D9D9;
+  -fx-text-fill: black;
+  -fx-padding: 12px 12px;
+  -fx-background-radius: 24px;
+  -fx-border-radius: 24px;
+  -fx-border-width: 1px;
+  -fx-border-color: rgba(0, 0, 0, 0);
+}
+.small-button:hover {
+  -fx-background-color: #EAEAEA;
+}
+.small-button:pressed {
+  -fx-background-color: white;
+}
+.small-button.selected {
+  -fx-border-color: #1585FF;
+  -fx-background-color: #F8F8F8;
+}
+.small-button.selected:hover {
+  -fx-background-color: #FFFFFF;
+}
+
+.game-button {
+  -fx-background-color: #646464;
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+  -fx-padding: 5px 10px;
+  -fx-background-radius: 5px;
+}
+.game-button.selected {
+  -fx-background-color: #007DB4;
+}
+
+.mtm-settings-trash-button2 {
+  -fx-border-radius: 20px;
+  -fx-background-radius: 20px;
+  -fx-border-width: 1px;
+  -fx-padding: 7px;
+  -fx-background-color: rgba(255, 255, 255, 0.5);
+  -fx-border-color: rgba(0, 0, 0, 0);
+  -fx-padding: 7px;
+  -fx-background-color: gainsboro;
+}
+.mtm-settings-trash-button2:hover {
+  -fx-background-color: white;
+}
+.mtm-settings-trash-button2:pressed {
+  -fx-border-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+maxi's spielekiste todo:
+
+MTM:
+//- Really bei Zeichenfläche löschen
+- width bei zeichener
+//- text zu lang bei anfrage
+- Franzi's Error
+//- get data button
+
+- Info-Dialog erzeugen

@@ -1,0 +1,719 @@
+@font-face {
+    font-family: 'smiley';
+    src: url('../fonts/NotoColorEmoji.ttf');
+}
+@mixin i-button($bc, $hc, $pc, $fc, $p1, $p2) {
+    -fx-background-color: $bc;
+    -fx-text-fill: $fc;
+    -fx-padding: $p1 $p2;
+    -fx-background-radius: $p1*2;
+    -fx-border-radius: $p1*2;
+    &:hover { -fx-background-color: $hc; }
+    &:pressed { -fx-background-color: $pc; }
+}
+.anmelden {
+  -fx-background-color: rgb(40, 40, 40);
+  -fx-padding: 20px 40px;
+}
+.white-text-label {
+  -fx-text-fill: rgb(200, 200, 200);
+}
+@mixin image-container($u) {
+    -fx-background-image: $u;
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-radius: 10px;
+}
+@mixin button($fs, $tf, $bc, $hc, $br) {
+    -fx-background-color: $bc;
+    -fx-background-radius: $br;
+    -fx-padding: 5px 10px 5px 10px;
+    -fx-text-fill: $tf;
+    -fx-font-size: $fs;
+    &:hover {
+        -fx-background-color: $hc;
+    }
+}
+@mixin small-label($fs) {
+    -fx-text-fill: black;
+    -fx-font-size: $fs;
+    -fx-background-color: rgb(255, 255, 255, 0.4);
+    -fx-background-radius: 20px;
+    -fx-padding: 5px 10px 5px 10px;
+}
+.go-button { @include button(18px, white, #228b22, rgb(62, 117, 48), 15px); }
+.invite-team-button { @include button(14px, white, #001488, #0015AA, 15px); }
+
+.green-button {
+    @include button(14px, white, #228b22, rgb(62, 117, 48), 20px);
+}
+.blue-button {
+    @include button(14px, white, #0000cd, #191970, 20px);
+}
+.timer-label {
+    -fx-background-color: rgba(0,0,0, 0.5);
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+.welcome-label {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-background-color: rgba(255, 255,255, 0.1);
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+}
+.game-pane {
+    -fx-padding: 7px;;
+    -fx-border-radius: 14px;
+    -fx-background-radius: 14px;
+    -fx-background-color: rgba(255,255,255, 0.1);
+    -fx-border-color: red;
+    & > * {
+        -fx-text-fill: yellow;
+    }
+}
+
+$player-radius-size: 10px;
+@mixin player {
+    -fx-font-size: 17px;
+    -fx-background-radius: $player-radius-size;
+    -fx-padding: 10px;
+    -fx-text-alignment: center;
+}
+.white-player {
+    @include player();
+    -fx-background-color: rgb(200,200,200);
+    -fx-text-fill: black;
+}
+.black-player {
+    @include player();
+    -fx-background-color: rgb(60,60,60);
+    -fx-text-fill: white;
+}
+.mtm-move-player {
+    @include player();
+    -fx-background-color: rgb(0,99,18);
+    -fx-text-fill: white;
+}
+.move-player {
+    -fx-border-radius: $player-radius-size;
+    -fx-border-color: blue;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+}
+.red-player {
+    @include player();
+    -fx-background-color: rgb(150,0,0);
+    -fx-text-fill: white;
+}
+.yellow-player {
+    @include player();
+    -fx-background-color: rgb(197,190,0);
+    -fx-text-fill: black;
+}
+.own-player {
+    @include player();
+    -fx-background-color: rgb(0,149,225);
+    -fx-text-fill: black;
+}
+.viewer-player {
+    @include player();
+    -fx-background-color: rgb(0,109,185);
+    -fx-text-fill: black;
+}
+.dealer-player {
+    @include player();
+    -fx-background-color: rgb(0,69,145);
+    -fx-text-fill: white;
+}
+.textfield-player {
+    @include player();
+    -fx-background-color: rgb(255,255,255);
+    -fx-text-fill: black;
+    -fx-border-radius: $player-radius-size;
+    -fx-border-color: green;
+    -fx-border-width: 2px;
+    -fx-padding: 10px 5px 10px 5px;
+}
+.wizard-move-player {
+    -fx-border-radius: $player-radius-size;
+    -fx-border-color: lightblue;
+    -fx-border-width: 2px;
+}
+.move-umgehen-player {
+    -fx-border-radius: $player-radius-size;
+    -fx-border-color: yellow;
+    -fx-border-width: 1px;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+    & > .viewport { -fx-background-color: transparent }
+}
+#image-container .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+#send-field {
+    -fx-font-size: 16px;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-text-fill: white;
+    &, * {
+        -fx-background-color: rgb(100, 100, 100);
+    }
+}
+@mixin badge($bc, $bs) {
+    -fx-background-radius: $bs;
+    -fx-background-color: $bc;
+    -fx-padding: 5px 10px 5px 10px;
+}
+@mixin small-button {
+    $br: 20px;
+    -fx-border-radius: $br;
+    -fx-background-radius:  $br;
+    -fx-border-width: 1px;
+    -fx-padding: 7px;
+    -fx-background-color: rgba(255,255,255, 0.5);
+    -fx-border-color: rgba(0,0,0,0);
+
+    &:hover {-fx-background-color: rgba(255,255,255, 1);}
+    &:pressed {-fx-border-color: black;}
+}
+#send-button {
+    @include small-button();
+    -fx-background-color: rgba(255,255,255, 0.7);
+    &:hover {
+        -fx-background-color: rgba(255,255,255, 0.9);
+    }
+}
+.smely-button {
+    @include small-button();
+    -fx-font-size: 16px;
+    -fx-padding: 2px;
+    -fx-font-size: 22px;
+}
+#image-container {
+    @include image-container(url("../image/chat-background.jpg"));
+}
+$bor: 10px;
+.message-name {
+    -fx-background-radius: $bor $bor 0 0;
+    -fx-background-color: rgba(0,0,0, 0.4);
+    -fx-padding: 5px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.message-text {
+    -fx-font-size: 14px;
+    -fx-padding: 7px;
+    -fx-background-radius: 0 0 $bor $bor;
+    -fx-background-color: rgba(255,255,255, 0.8);
+    -fx-text-fill: black;
+}
+.really-text {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+}
+.really-under {
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.really-ja,
+.really-nein {
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-padding: 7px 15px 7px 15px;
+}
+.really-ja {
+    -fx-background-color: rgb(104, 18, 0);
+    &:hover {
+        -fx-background-color: rgb(127, 20, 0);
+    }
+}
+.really-nein {
+    -fx-background-color: rgb(0, 102, 2);
+    &:hover {
+        -fx-background-color: rgb(0, 123, 2);
+    }
+}
+.really-wrong {
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-background-radius: 20px;
+    -fx-padding: 5px 10px 5px 10px;
+    -fx-text-fill: yellow;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.end-dialog-exit {
+    @include button(14px, white, #228b22, rgb(62, 117, 48), 20px);
+    -fx-font-size: 15px;
+}
+.end-dialog-partie {
+    @include button(14px, white, #0000cd, #191970, 20px);
+}
+.choose-piece-container {
+    @include image-container(url("../image/chat-background.jpg"));
+    -fx-padding: 10px;
+    -fx-border-size: 2px;
+}
+.end-dialog-container {
+    @include image-container(url("../image/chat-background.jpg"));
+    -fx-padding: 40px;
+}
+.choose-piece-image {
+    @include small-button();
+}
+
+.end-dialog-label1 {
+    -fx-background-radius: 10px;
+    -fx-background-color: rgba(255,255,255, 0.4);
+    -fx-padding: 10px 5px 10px 5px;
+    -fx-text-fill: black;
+    -fx-text-weight: bold;
+    -fx-font-size: 25px;
+}
+.end-dialog-label2 {
+    -fx-font-size: 20px;
+}
+.message-container {
+    -fx-background-color: radial-gradient(radius 180%, #000000, #020077);
+    -fx-padding: 10px;
+}
+.message-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+.message-button {
+    @include button(15px, white, rgb(6, 79, 0), rgb(6, 103, 0), 10px);
+}
+
+.sources-container {
+    -fx-background-color: rgb(50,50,50);
+    -fx-padding: 20px;
+}
+.sources-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+.sources-link {
+    @include badge(rgba(200, 0, 200, 0.4), 10px);
+    -fx-padding: 2px 5px 2px 5px;
+    -fx-text-fill: white;
+}
+.source-button {
+    @include button(14px, white, #191970, #0000cd, 20px);
+    &:pressed { -fx-background-color: lightblue !important; }
+}
+@mixin online-name($bc, $bs) {
+    -fx-font-size: 12px;
+}
+@mixin online-tippt($bc, $bs) {
+    -fx-font-size: 10px;
+}
+.online-pane {
+    -fx-padding: 4px;
+    -fx-background-color: rgba(222, 206, 255, 0.4);
+}
+
+.online-name {
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+.online-tippt {
+    -fx-font-size: 14px;
+    -fx-text-fill: red;
+}
+
+.online-black-tippt,
+.online-red-tippt{
+    -fx-text-fill: yellow;
+}
+.online-white-tippt,
+.online-viewer-tippt {
+    -fx-text-fill: red;
+}
+.online-yellow-tlaippt {
+    -fx-text-fill: blue;
+}
+
+.mtm-settings-pane {
+    -fx-padding: 4px;
+    -fx-background-color: rgba(0,0,0, 0.07);
+}
+.mtm-settings-back-button {
+    @include small-button();
+    -fx-padding: 2px;
+}
+.mtm-settings-trash-button {
+    @include small-button();
+    -fx-padding: 7px;
+}
+.mtm-settings-togglebutton {
+    $br: 15px;
+    -fx-background-radius: $br;
+    -fx-border-radius: $br;
+}
+.anfrage-pane {
+    -fx-background-color: rgba(0,0,0, 0.3);
+    -fx-background-radius: 5px;
+    -fx-padding: 7px;
+}
+.anfrage-container {
+    @include image-container(url("../image/chat-background.jpg"));
+    -fx-padding: 5px;
+}
+.anfrage-label {
+    -fx-text-fill: black;
+    -fx-font-size: 16px;
+    -fx-background-color: rgb(162, 255, 250);
+    -fx-background-radius: 10px;
+    -fx-padding: 3px 5px 3px 5px;
+}
+.anfrage-button {
+    @include small-button();
+}
+.small-label {
+    @include small-label(14px);
+}
+.anfragen-dialog-pane {
+    @include image-container(url("../image/chat-background.jpg"));
+    -fx-padding: 10px;
+}
+.anfragen-dialog-label {
+    @include badge(rgba(255,255,255, 0.4), 7px);
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+.anfragen-dialog-textfield {
+    -fx-font-size: 20px;
+}
+@mixin upper-border-pane($bc) {
+    -fx-background-color: $bc;
+    -fx-background-radius: 10px;
+    -fx-padding: 6px;
+}
+.upper-border-pane {
+    @include upper-border-pane(rgb(220, 220, 200));
+}
+.upper-border-pane-wizard {
+    @include upper-border-pane(rgb(0, 0, 0, 0.4));
+}
+.menu-bar {
+    -fx-padding: 0;
+    -fx-background-color: rgb(210, 210, 220);
+    -fx-spacing: 5px;
+}
+.menu {
+    //-fx-background-color: rgb(200, 200, 200);
+}
+.menu, .menu-item {
+    -fx-text-fill: black;
+    &:hover {
+        -fx-text-fill: black !important;
+        -fx-background-color: rgb(0, 160, 255) !important;
+    }
+    &:pressed {
+        -fx-text-fill: black !important;
+        -fx-background-color: rgb(0, 100, 225) !important;
+    }
+}
+@mixin wrong-anfrage($c) {
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+    -fx-padding: 5px 10px 5px 10px;
+    -fx-background-radius: 10px;
+    -fx-background-color: $c;
+}
+.almost-anfrage-back {
+    @include wrong-anfrage(rgba(255, 171, 0, 0.5));
+}
+.right-anfrage-back {
+    @include wrong-anfrage(#04B800);
+}
+.wrong-anfrage-back {
+    @include wrong-anfrage(rgba(255, 50, 0, 0.5));
+}
+.image-button {
+    -fx-border-color: rgba(0,0,0,1);
+    -fx-border-width: 5px;
+    &:hover {
+        -fx-border-color: green;
+    }
+}
+.cards-container {
+    -fx-padding: 10px;
+    -fx-background-color: rgb(216, 216, 216);
+    @include image-container(url("../image/wood-background.jpg"));
+    -fx-effect: dropshadow(three-pass-box, white, 30, 0, 0, 0);
+}
+
+@mixin placementBadge($fc, $bc) {
+    -fx-text-fill: $fc;
+    -fx-font-size: 16px;
+    -fx-background-color: $bc;
+    -fx-background-radius: 10px;
+    -fx-padding: 3px 5px 3px 5px;
+}
+
+.placement-name {
+    @include placementBadge(black, rgba(255,255,255,0.5));
+    -fx-font-size: 18px;
+}
+.placement-points {
+    @include placementBadge(white, rgb(255,100,0));
+}
+.placement-runden-d {
+    @include placementBadge(black, rgb(255,100,0));
+}
+.placement-last-plus {
+    @include placementBadge(white, darkgreen);
+}
+.placement-v-stiche {
+    @include placementBadge(white, blue);
+}
+.placement-a-stiche {
+    @include placementBadge(white, red);
+}
+.placement-place {
+    @include placementBadge(black, rgba(255,255,255, 0.6));
+    -fx-font-size: 12px;
+}
+.placement-container {
+    @include image-container(url("../image/wood-background.jpg"));
+    -fx-padding: 10px;
+}
+.wood-container {
+    @include image-container(url("../image/wood-background.jpg"));
+}
+@mixin placement-pane($c) {
+    -fx-background-color: $c;
+    -fx-background-radius: 5px;
+    -fx-padding: 7px;
+}
+.placement-pane-other { @include placement-pane(rgba(0,0,0, 0.45)); }
+.placement-pane-own { @include placement-pane(rgba(0,40,0, 0.45)); }
+.placement-pane-bottom {
+    @include placement-pane(rgba(0,0,0, 0.45));
+    -fx-border-radius: 5px;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+}
+
+.wizard-upperborder {
+    @include image-container(url("../image/wood-background.jpg"));
+    -fx-effect: dropshadow(three-pass-box, white, 0, 0, 0, 30);
+    -fx-padding: 10px;
+}
+.wizard-info {
+    -fx-font-size: 15px;
+    -fx-text-fill: yellow;
+    -fx-padding: 3px 9px;
+    -fx-background-radius: 10px;
+    -fx-background-color: darkblue;
+}
+.center-component-box2 {
+    -fx-padding: 15px;
+    -fx-background-radius: 20px;
+    -fx-background-color: rgba(255,255,255, 0.5);
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+.center-component-button {
+    -fx-padding: 7px 14px;
+    @include button(18px, white, darkblue, blue, 10px);
+}
+.welcome-label2 {
+    -fx-background-color: rgba(0,0,0, 0.6);
+}
+.simple-dialog-label {
+    @include small-label(15px);
+}
+.simple-dialog-container-wood {
+    @include image-container(url("../image/wood-background.jpg"));
+    -fx-padding: 0px;
+}
+.simple-dialog-container-normal {
+    -fx-background-color: radial-gradient(radius 180%, lightblue, blue);
+    -fx-padding: 20px;
+}
+.select-trumpf-button {
+    -fx-padding: 20px;
+    -fx-background-color: rgba(255,255,255, 0.3);
+    -fx-background-radius: 10px;
+    &:hover { -fx-background-color: rgba(255,255,255, 0.5);}
+    &:pressed { -fx-background-color: rgba(255,255,255, 0.8);}
+}
+.hellsehen-label-owner {
+    @include small-label(15px);
+    -fx-background-color: rgba(0,0,0, 0.5);
+    -fx-text-fill: yellow;
+}
+.hellsehen-container {
+    -fx-padding: 5px;
+    -fx-background-color: rgba(255,255,255, 0.2);
+    -fx-background-radius: 10px;
+}
+.rundenanzahl-label {
+    @include badge(rgba(0,0,0, 0.3), 20px);
+    -fx-font-size: 16px;
+}
+.noconnect-label {
+    @include badge(rgba(0,0,255,0.7), 20px);
+    -fx-text-fill: white;
+}
+.my-chombobox {
+    -fx-background-color: rgb(100,100,100);
+    &:hover { -fx-background-color: rgb(120,120,120); }
+    -fx-text-fill: rgb(200,200,200);
+    -fx-font-size: 14px;
+}
+.small-heading-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: rgb(200,200,200);
+}
+.my-textfield {
+    -fx-background-color: rgb(100,100,100);
+    &:hover { -fx-background-color: rgb(120,120,120); }
+    -fx-text-fill: yellow;
+    -fx-font-size: 14px;
+}
+#s-stark { -fx-text-fill: lightgreen; }
+#s-mittel { -fx-text-fill: yellow; }
+#s-schwach { -fx-text-fill: orange; }
+
+.hoverball-team-item {
+    -fx-padding: 10px;
+}
+.hoverball-team-item-label1 {
+    @include badge(rgba(0,0,0,0.5), 10px);
+    -fx-font-size: 18px;
+    -fx-text-fill: yellow;
+}
+.hoverball-team-item-label2 {
+    @include badge(rgba(0,0,0,0.3), 10px);
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+.hoverball-team-item-label3 {
+    @include badge(rgba(0,0,0,0.3), 10px);
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+.hoverball-team-item-label4 {
+    @include badge(rgba(100,0,0,0.5), 5px);
+    -fx-padding: 3px 6px;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+.background-gradient {
+    -fx-background-color: radial-gradient(radius 180%, purple, blue);
+}
+.cyber-label {
+    @include badge(rgba(255,255,255, 0.5), 10px);
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+}
+.cyber-button {
+    @include button(18px, white, darkred, red, 10px);
+    -fx-padding: 7px 14px;
+}
+.connect-label {
+    -fx-font-size: 11px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 14px;
+    -fx-text-fill: white;
+}
+.eye-label {
+    -fx-font-size: 16px;
+    -fx-padding: 7px;
+    -fx-background-radius: 14px;
+    -fx-background-color: rgb(0,0,160);
+    -fx-text-fill: white;
+    &:hover {
+        -fx-background-color: rgb(0,0,200);
+    }
+}
+.start-user-label {
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+}
+.version-label {
+    @include badge(rgb(100, 100, 100), 5px);
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-padding: 5px 10px;
+}
+.preloader-loading {
+    @include badge(rgba(50, 50, 50, 0.7), 10px);
+    -fx-font-size: 18px;
+    -fx-text-fill: #FFFFAE;
+    -fx-padding: 5px 10px;
+}
+.preloader-container {
+    @include image-container(url("../image/preloader.png"));
+    -fx-padding: 20px;
+}
+.green-button {
+    @include i-button(#007C3E, #009048, lightgreen, white, 7px, 7px);
+}
+.dialog-container {
+    -fx-background-color: rgb(50, 50, 50);
+    -fx-background-radius: 7px;
+}
+.close-button {
+    @include i-button(rgb(255,255,255,0.2), rgb(255,255,255,0.4), gray, yellow, 1px, 7px);
+    -fx-background-radius: 10px;
+}
+@mixin scroll-pane($bc, $hc, $pc) {
+    .scroll-bar {
+        -fx-background-color: transparent;
+        .increment-button, .decrement-button {visibility: hidden;}
+        .thumb {
+            -fx-background-color: $bc;
+            -fx-background-radius: 20px;
+            &:hover { -fx-background-color: $hc }
+            &:pressed { -fx-background-color: $pc }
+        }
+    }
+}
+.dark-scroll-pane {
+    @include scroll-pane(rgb(100, 100, 100), rgb(120, 120, 120), rgb(140, 140, 140))
+}
+.brown-scroll-pane {
+    @include scroll-pane(#6B470F, #744D10, #A46D17)
+}
+.blue-scroll-pane {
+    @include scroll-pane(#00406D, #004F87, #006FBE)
+}
+.blue-background {
+    @include image-container(url("../image/chat-background.jpg"));
+}
+.small-button {
+    @include i-button(#D9D9D9, #EAEAEA, white, black, 12px, 12px);
+    -fx-border-width: 1px;
+    -fx-border-color: rgba(0,0,0,0);
+    &.selected {
+        -fx-border-color: #1585FF;
+        -fx-background-color: #F8F8F8;
+        &:hover { -fx-background-color: #FFFFFF; }
+    }
+}
+.game-button {
+    -fx-background-color: rgb(100,100,100);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    &.selected { -fx-background-color: #007DB4; }
+}
+.mtm-settings-trash-button2 {
+    @include small-button();
+    -fx-padding: 7px;
+    -fx-background-color: rgb(220,220,220)
+}
